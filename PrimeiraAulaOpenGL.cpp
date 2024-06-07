@@ -1,3 +1,5 @@
+//Quadrado girando - questao 5
+
 #include <GL/glut.h>
 
 void display()
