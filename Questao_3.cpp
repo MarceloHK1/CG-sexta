@@ -22,9 +22,9 @@ void display()
 
 void teclado(unsigned char key, int x, int y)
 {
-	//Tabela ascii 32 = "[espaço]"
+	//Tabela ascii 32 = "[espaÃ§o]"
 	if (key == 32) {
-		y_position += 0.025;
+		y_position = 0.025;
 	}
 
 	glutPostRedisplay();
