@@ -11,10 +11,10 @@ void display()
 	glTranslatef(0, y_position, 0);
 
 	glBegin(GL_QUADS);
+	glVertex2f(-3, -9);
 	glVertex2f(-3, -3);
-	glVertex2f(-3, 3);
-	glVertex2f(3, 3);
 	glVertex2f(3, -3);
+	glVertex2f(3, -9);
 	glEnd();
 
 	glFlush();
@@ -24,7 +24,10 @@ void teclado(unsigned char key, int x, int y)
 {
 	//Tabela ascii 32 = "[espaço]"
 	if (key == 32) {
-		y_position = 0.025;
+		y_position = 0.5;
+	}
+	else {
+		return;
 	}
 
 	glutPostRedisplay();
