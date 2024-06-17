@@ -9,22 +9,13 @@ void circle(float radius)
 	glBegin(GL_POLYGON);
 	for (i = 0; i < 360; i++) {
 		angle = i * 3.14159 / 180;
-		if (i < 51) {
-			glColor3f(1, 0, 0);
-		} else if (i < 102) {
-			glColor3f(1, 0.5, 0);
-		} else if(i < 153) {
-			glColor3f(1, 0, 0);
-		} else if (i < 204) {
-			glColor3f(1, 0.5, 0);
-		} else if (i < 255) {
-			glColor3f(1, 0, 0);
-		} else if (i < 306) {
-			glColor3f(1, 0.5, 0);
-		} else {
-			glColor3f(1, 0, 0);
-		}
+		
+		float r = sin(angle * 3) * 0.5 + 0.5;
+        	float g = sin(angle * 3 + 2) * 0.5 + 0.5;
+        	float b = sin(angle * 3 + 4) * 0.5 + 0.5;
 
+        	glColor3f(r, g, b);
+		
 		glVertex2f(radius * cos(angle), radius * sin(angle));
 	}
 	glEnd();
